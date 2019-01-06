@@ -1,0 +1,22 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex: 1;
+
+  section {
+    flex: 1;
+    background-color: red;
+  }
+
+}
+
+.appsidebar {
+  background-color: #262626e7;
+  width: 20vw;
+
+}

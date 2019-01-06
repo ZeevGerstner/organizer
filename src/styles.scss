@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: Lobster;
+  src: url(./assets/fonts/Lobster-Regular.ttf);
+}
+
+@font-face {
+  font-family: Inconsolata-Regular;
+  src: url(./assets/fonts/Inconsolata-Regular.ttf);
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
