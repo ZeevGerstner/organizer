@@ -6,7 +6,7 @@ import { moveItemInArray } from '@angular/cdk/drag-drop';
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.scss']
 })
-export class TaskListComponent implements OnInit,Input {
+export class TaskListComponent implements OnInit {
   @Input() artists:[]
   
   constructor() {

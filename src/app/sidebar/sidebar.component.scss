@@ -1,5 +1,8 @@
 .sidebar {
-  
+  width: 15vw;
+  @media screen and (max-width:820px) {
+    width: 20vw;
+    }
   ul {
     color: whitesmoke;
     list-style-type: none;

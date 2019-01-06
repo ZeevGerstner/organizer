@@ -1,13 +1,14 @@
 .task-container {
-  width: 70vw;
+  width: 80vw;
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(200px,350px));
+  grid-template-columns: repeat(3, minmax(200px,auto));
   grid-auto-rows: auto;
   grid-gap: 10px;
 
   @media screen and (max-width:820px) {
-  grid-template-columns: repeat(2,250px);
+  width: 70vw;
+  grid-template-columns: repeat(2,auto);
   }
 
   @media screen and (max-width:700px) {
