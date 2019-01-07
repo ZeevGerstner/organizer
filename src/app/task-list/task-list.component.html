@@ -1,4 +1,9 @@
-<div class="list" cdkDropList (cdkDropListDropped)="drop($event)">
-  <h3>ToDo</h3>
-  <div class="list-item" *ngFor="let artist of artists" cdkDrag>{{artist}}</div>
+<div class="list-container">
+  <h2 class="list-title">{{title | uppercase}}</h2>
+  <div cdkDropList [cdkDropListData]="list[title]" (cdkDropListDropped)="drop($event)" class="list">
+    <div class="list-item" *ngFor="let item of list[title]" cdkDrag>
+      <div class="list-placeholder" *cdkDragPlaceholder></div>
+      {{item}}
+    </div>
+  </div>
 </div>

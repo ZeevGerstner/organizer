@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainPageComponent } from './main-page/main-page.component';
 import { TaskAppComponent } from './task-app/task-app.component';
-import { TaskListComponent } from './task-list/task-list.component';
 
 const routes: Routes = [
   {
@@ -13,10 +12,6 @@ const routes: Routes = [
     path: 'tasks',
     component: TaskAppComponent,
   },
-  {
-    path: 'tasks',
-    component: TaskListComponent,
-  }
 ];
 
 @NgModule({

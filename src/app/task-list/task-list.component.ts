@@ -1,21 +1,29 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { moveItemInArray } from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'task-list',
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.scss']
 })
-export class TaskListComponent implements OnInit {
-  @Input() artists:[]
-  
-  constructor() {
-  }
+export class TaskListComponent {
+  @Input() list: any
+  title = ''
 
   ngOnInit() {
+    this.title = Object.keys(this.list)[0]
   }
+  
+  drop(event: CdkDragDrop<string[]>) {
 
-  drop(event) {
-    moveItemInArray(this.artists, event.previousIndex, event.currentIndex);
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    }
+    else {
+      transferArrayItem(event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex);
+    }
   }
 }
